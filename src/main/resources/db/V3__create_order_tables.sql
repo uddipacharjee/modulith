@@ -9,7 +9,7 @@ create table orders
     customer_phone text                                   not null,
     product_code   text                                   not null,
     product_name   text                                   not null,
-    product_price  text                                   not null,
+    product_price  numeric(38,2)                          not null,
     quantity       int                                    not null,
     status         text                                   not null,
     comments       text,
