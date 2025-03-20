@@ -19,7 +19,7 @@ public class InventoryService {
     private final InventoryRepository inventoryRepository;
 
     @EventListener
-    @Transactional
+    @Transactional(readOnly = true)
     public void on(OrderCreatedEvent event) {
         log.info("Updating inventory for product code: {}, quantity: {}",
                 event.productCode(), event.quantity());

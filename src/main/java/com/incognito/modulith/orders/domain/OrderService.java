@@ -25,7 +25,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final ProductService productService;
     private final ApplicationEventPublisher eventPublisher;
-
+    @Transactional
     public CreateOrderResponse createOrder(CreateOrderRequest request) {
         validate(request);
         OrderEntity newOrder = OrderMapper.convertToEntity(request);
