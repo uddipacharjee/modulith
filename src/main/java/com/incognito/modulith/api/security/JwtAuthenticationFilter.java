@@ -1,4 +1,4 @@
-package com.incognito.modulith.users.security;
+package com.incognito.modulith.api.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

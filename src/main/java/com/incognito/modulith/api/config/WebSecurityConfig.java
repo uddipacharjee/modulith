@@ -1,7 +1,7 @@
-package com.incognito.modulith.users.config;
+package com.incognito.modulith.api.config;
 
-import com.incognito.modulith.users.security.CustomUserDetailsService;
-import com.incognito.modulith.users.security.JwtAuthenticationFilter;
+import com.incognito.modulith.api.security.CustomUserDetailsService;
+import com.incognito.modulith.api.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,6 +28,13 @@ public class WebSecurityConfig {
         http
             .csrf(csrf -> csrf.disable())  // Disable CSRF for API endpoints
             .authorizeHttpRequests(authorize -> authorize
+                // Swagger UI and OpenAPI endpoints
+                .requestMatchers("/swagger-ui.html").permitAll()
+                .requestMatchers("/swagger-ui/**").permitAll()
+                .requestMatchers("/v3/api-docs/**").permitAll()
+                .requestMatchers("/swagger-resources/**").permitAll()
+                .requestMatchers("/webjars/**").permitAll()
+                // API endpoints
                 .requestMatchers("/api/auth/**").permitAll()  // Allow authentication endpoints
                 .requestMatchers("/api/users/**").permitAll()  // For testing, allow user endpoints
                 .requestMatchers("/api/customers/**").permitAll()  // For testing, allow customer endpoints

@@ -1,4 +1,4 @@
-package com.incognito.modulith.users.config;
+package com.incognito.modulith.api.config;
 
 import com.incognito.modulith.users.exceptions.UserAlreadyExistsException;
 import com.incognito.modulith.users.exceptions.UserNotFoundException;
