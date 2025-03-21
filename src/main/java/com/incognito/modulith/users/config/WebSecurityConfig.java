@@ -1,7 +1,7 @@
-package com.incognito.modulith.api.config;
+package com.incognito.modulith.users.config;
 
-import com.incognito.modulith.api.security.CustomUserDetailsService;
-import com.incognito.modulith.api.security.JwtAuthenticationFilter;
+import com.incognito.modulith.users.security.CustomUserDetailsService;
+import com.incognito.modulith.users.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

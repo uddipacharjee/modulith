@@ -5,7 +5,7 @@ import com.incognito.modulith.users.dto.AuthRequest;
 import com.incognito.modulith.users.dto.AuthResponse;
 import com.incognito.modulith.users.exceptions.UserNotFoundException;
 import com.incognito.modulith.users.repository.UserRepository;
-import com.incognito.modulith.api.security.JwtUtil;
+import com.incognito.modulith.users.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.BadCredentialsException;

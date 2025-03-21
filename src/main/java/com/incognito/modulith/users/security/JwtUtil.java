@@ -1,4 +1,4 @@
-package com.incognito.modulith.api.security;
+package com.incognito.modulith.users.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;

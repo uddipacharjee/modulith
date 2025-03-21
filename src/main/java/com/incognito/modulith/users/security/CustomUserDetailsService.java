@@ -1,4 +1,4 @@
-package com.incognito.modulith.api.security;
+package com.incognito.modulith.users.security;
 
 import com.incognito.modulith.users.domain.UserEntity;
 import com.incognito.modulith.users.repository.UserRepository;
